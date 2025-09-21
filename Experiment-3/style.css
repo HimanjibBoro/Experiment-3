@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar{
+    position : sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 15px 20px;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.logo{
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+    .nav-links {
+    position: absolute;
+    top: 60px;
+    right: -100%;
+    flex-direction: column;
+    background: #333;
+    width: 200px;
+    text-align: center;
+    transition: right 0.3s ease;
+    padding: 20px 0;
+    }
+
+    .nav-links.active {
+    right: 0;
+    }
+
+    .hamburger {
+    display: flex;
+    }
+
+  /* Animation for hamburger icon */
+    .hamburger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.toggle span:nth-child(2) {
+    opacity: 0;
+    }
+    .hamburger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    }
+    #Profile h1{
+        text-align: center;
+        padding-top: 60px;
+        font-size: 28px;
+    }
+    #Profile img{
+        width: 250px;
+        display:block;
+        margin: 0 auto;
+
+    }
+    #about h2{
+        padding-top: 60px;
+        text-align:center;
+        font-size:28px;
+    }
+
+    #pic h3{
+        padding-top:60px;
+        text-align:center;
+        font-size:28px;
+        
+    }
+    #pic .gallary{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px ,1fr));
+        gap:15px;
+        max-width:1000px;
+        margin:0 auto;
+    }
+    #pic img{
+        width: 100%;
+        border-radius:10px;
+        transition:transform 0.3s;
+        object-fit:cover;
+    }
+    #pic img:hover{
+        transform:scale(1.05);
+    }
+
+    #con h4{
+        padding-top:60px;
+        text-align:center;
+        font-size:28px;
+    }
